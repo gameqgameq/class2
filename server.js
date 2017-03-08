@@ -42,7 +42,7 @@ var server = http.createServer(function (req, res) {
             // 若檔案讀取錯誤，回傳 404
             res.writeHead(404, { 'Content-Type': 'text/html' });
             res.write("<script>alert('找不到檔案');</script>");
-            res.write(pathname);
+            res.write(filePath);
             res.end();
             return;
         }
